@@ -1,0 +1,744 @@
+:root {
+    --mainmargin: 70px;
+    --maincolor: orange;
+    --seccolor: rgb(18, 223, 18);
+}
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: arial;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* @media (max-width: 767px) {
+    .main {
+        width: 90%;
+        padding: 10px;
+    }
+}
+@media (max-width: 991px) {
+    .main {
+        width: 90%;
+        padding: 10px;
+    }
+} */
+/* @media (max-width: 1199px) {
+    .main {
+        width: 90%;
+        padding: 10px;
+    }
+} */
+/* @media (min-width: 1200px) {
+    .main {
+        width: 90%;
+    }
+} */
+.main {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.head {
+    width: 450px;
+    height: 100px;
+    text-align: center;
+    padding: 40px;
+    margin: 40px auto;
+}
+.head p {
+    font-size: 22px;
+    font-weight: bold;
+}
+.head h3 {
+    font-size: 32px;
+    color: var(--maincolor);
+}
+.container1 {
+    width: 100%;
+    min-height: 800px;
+    background: url(../images/b1.jpg) no-repeat center/100%;
+    margin-bottom: var(--mainmargin);
+}
+.container1 .header {
+    height: 50px;
+    background: transparent;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.container1 .header h3 {
+    width: 400px;
+    height: 50px;
+    color: white;
+    line-height: 50px;
+    margin-left: 10px;
+}
+.container1 nav ul {
+    width: 600px;
+    height: 50px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+}
+.container1 nav ul li {
+    width: 100px;
+    height: 100%;
+    list-style: none;
+}
+.container1 nav ul li a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    color: white
+}
+.container1 nav ul li:hover a {
+    background: rgb(71, 70, 70);
+    color: rgb(241, 74, 74);
+}
+.container1 .cont {
+    width: 1000px;
+    height: 400px;
+    margin: 200px auto;
+    position: relative;
+}
+.container1 .cont .border {
+    width: 400px;
+    height: 200px;
+    border: 3px solid var(--maincolor);
+    border-radius: 3px;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+.container1 .cont .headertext {
+    width: 400px;
+    height: 170px;
+    border-radius: 3px;
+    background: #eee;
+    position: absolute;
+    top: 60%;
+    left: 20%;
+    padding: 50px 20px;
+}
+.container1 .cont .headertext p {
+    font-size: 20px;
+    font-weight: bold;
+}
+.container1 .cont .headertext h1 {
+    font-size: 35px;
+    color: var(--seccolor);
+}
+.container2 {
+    width: 100%;
+    height: 500px;
+    margin-bottom: var(--mainmargin);
+}
+.container2 .cardsbox {
+    width: 75%;
+    height: 350px;
+    margin: 20px auto;
+    perspective: 400px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+} 
+.container2 .cardsbox .card1,
+.container2 .cardsbox .card2,
+.container2 .cardsbox .card3,
+.container2 .cardsbox .card4 {
+    width: 240px;
+    height: 350px;
+    transition: all 1s;
+    transform-style: preserve-3d;
+}
+
+.container2 .card1 .front {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../images/ab1.jpg) no-repeat center/100% 100%;
+}
+.container2 .card2 .front {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../images/ab2.jpg) no-repeat center/100% 100%;
+}
+.container2 .card3 .front {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../images/ab3.jpg) no-repeat center/100% 100%;
+}
+.container2 .card4 .front {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../images/ab4.jpg) no-repeat center/100% 100%;
+}
+.container2 .card1 .back,
+.container2 .card2 .back,
+.container2 .card3 .back,
+.container2 .card4 .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 0.8rem;
+    background: white;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.container2 .card1 .back h6, 
+.container2 .card2 .back h6, 
+.container2 .card3 .back h6, 
+.container2 .card4 .back h6 {
+    font-size: 30px;
+    color: var(--maincolor);
+    margin: 0.7rem 0;
+}
+
+.container2 .card1 .back h2, 
+.container2 .card2 .back h2, 
+.container2 .card3 .back h2, 
+.container2 .card4 .back h2 {
+    font-size: 24px;
+    color: var(--seccolor);
+    margin: 0.7rem 0;
+}
+
+.container2 .card1 .back p, 
+.container2 .card2 .back p, 
+.container2 .card3 .back p, 
+.container2 .card4 .back p {
+    font-size: 18px;
+    margin: 0.7rem 0;
+    line-height: 1.2;
+}
+
+.cardsbox :is(.card1, .card2, .card3, .card4):hover {
+    transform: rotateY(180deg);
+    transition: all 1s linear;
+    transition-delay: 0.5s;
+}
+.container3 {
+    width: 100%;
+    min-height: 400px;
+    background: url(../images/b3.jpg) no-repeat center/100% 100%;
+    margin-top: var(--mainmargin);
+    margin-bottom: var(--mainmargin);
+}
+.container3 .head p {
+    color: white;
+}
+.container3 .icons {
+    width: 75%;
+    height: 160px;
+    margin: 80px auto;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+}
+.container3 .icons .circles {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.container3 .icons .circles i {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+.container3 .icons .circles p {
+    font-size: 28px;
+    color: var(--maincolor);
+}
+.container4 {
+    margin-top: var(--mainmargin);
+    margin-bottom: var(--mainmargin);
+    width: 1400px;
+    min-height: 700px;
+    margin: 0 auto;
+}
+.container4 .offerbox {
+    width: 75%;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-evenly;
+}
+.container4 .offerbox .box {
+    width: 320px;
+    height: 220px;
+    border: 2px solid rgb(197, 193, 193);
+    border-radius: 2px;
+    padding: 30px 20px;
+}
+.offerbox .box i {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.offerbox .box h2 {
+    font-size: 25px;
+    color: var(--seccolor);
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.offerbox .box p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #777;
+}
+.container5 {
+    width: 100%;
+    min-height: 400px;
+    margin: 0 auto;
+    margin-top: var(--mainmargin);
+    margin-bottom: var(--mainmargin);
+    display: flex;
+    flex-flow: wrap ;
+}
+.container5 .portrait {
+    width: 50%;
+    height: 400px;
+    background: url(../images/ab4.jpg)no-repeat center/100% 100%;
+    position: relative;
+}
+.container5 .portrait .border {
+    width: 350px;
+    height: 180px;
+    position: absolute;
+    top: 15%;
+    right: -10%;
+    border: 2px solid var(--seccolor);
+    border-radius: 3px;
+}
+.container5 .special {
+    width: 50%;
+    height: 400px;
+    background: #eee;
+    padding: 80px;
+}
+.container5 .special h2 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: var(--seccolor);
+}
+.container6 {
+    width: 100%;
+    min-height: 800px;
+    margin: var(--mainmargin) auto;
+}
+.container6 .gallerybox {
+    width: 75%;
+    height: 620px;
+    margin: 30px auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.container6 .gallerybox .img1{
+    flex-basis: 240px;
+    height: 300px;
+    background: url(../images/g4.jpg) no-repeat center/100% 100%;
+}
+.container6 .gallerybox .img2{
+    flex-basis: 240px;
+    height: 300px;
+    background: url(../images/g5.jpg) no-repeat center/100% 100%;
+}
+.container6 .gallerybox .img3{
+    flex-basis: 480px;
+    height: 300px;
+    background: url(../images/g6.jpg) no-repeat center/100% 100%;
+}
+.container6 .gallerybox .img4{
+    flex-basis: 480px;
+    height: 300px;
+    background: url(../images/ab4.jpg) no-repeat center/100% 100%;
+}
+.container6 .gallerybox .img5{
+    flex-basis: 240px;
+    height: 300px;
+    background: url(../images/g2.jpg) no-repeat center/100% 100%;
+}
+.container6 .gallerybox .img6{
+    flex-basis: 240px;
+    height: 300px;
+    background: url(../images/g3.jpg) no-repeat center/100% 100%;
+}
+.container7 {
+    width: 100%;
+    height: 700px;
+    margin: var(--mainmargin) auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+.container7 .rect1 {
+    width: 49.5%;
+    height: 350px;
+    padding: 50px;
+    background: #eee;
+}
+.container7 .rect1 p {
+    color: #777;
+    margin: 20px 0;
+}
+.container7 .rect1 h4 {
+    font-size: 30px;
+    color: var(--seccolor);
+}
+.container7 .rect1 a {
+    text-decoration: none;
+    width: 100px;
+    height: 40px;
+    display: block;
+    background: black;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 2px;
+    margin-top: 40px;
+}
+.container7 .rect2 {
+    width: 49.5%;
+    height: 350px;
+    padding: 50px;
+    background: url(../images/b4.jpg) no-repeat center/100% 100%;
+}
+.container7 .rect2 p {
+    color: #777;
+    margin: 20px 0;
+}
+.container7 .rect2 h4 {
+    font-size: 30px;
+    color: var(--seccolor);
+}
+.container7 .rect2 a {
+    text-decoration: none;
+    width: 100px;
+    height: 40px;
+    display: block;
+    background: black;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 2px;
+    margin-top: 40px;
+}
+.container7 .rect3 {
+    width: 49.5%;
+    height: 350px;
+    padding: 50px;
+    background: url(../images/g6.jpg) no-repeat center/100% 100%;
+}
+.container7 .rect3 p {
+    color: #777;
+    margin: 20px 0;
+}
+.container7 .rect3 h4 {
+    font-size: 30px;
+    color: var(--seccolor);
+}
+.container7 .rect3 a {
+    text-decoration: none;
+    width: 100px;
+    height: 40px;
+    display: block;
+    background: black;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 2px;
+    margin-top: 40px;
+}
+.container7 .rect4 {
+    width: 49.5%;
+    height: 350px;
+    padding: 50px;
+    background: #eee;
+}
+.container7 .rect4 p {
+    color: #777;
+    margin: 20px 0;
+}
+.container7 .rect4 h4 {
+    font-size: 30px;
+    color: var(--seccolor);
+}
+.container7 .rect4 a {
+    text-decoration: none;
+    width: 100px;
+    height: 40px;
+    display: block;
+    background: black;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 2px;
+    margin-top: 40px;
+}
+.container8 {
+    width: 100%;
+    height: 700px;
+    margin: 0 auto;
+}
+.container8 .bookingbox {
+    width: 75%;
+    height: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.container8 .bookingbox .imgs1 {
+    width: 240px;
+    height: 450px;
+}
+.container8 .bookingbox .imgs1 img{
+    width: 240px;
+    height: 200px;
+}
+.container8 .bookingbox .imgs1 h3 {
+    font-size: 20px;
+    margin: 20px 5px;
+    color: var(--maincolor);
+}
+.container8 .bookingbox .imgs1 p {
+    font-size: 15px;
+    color: #777;
+    line-height: 1.8;
+    margin: 15px 10px;
+}
+.container8 .bookingbox .imgs1 .moneybox {
+    width: 240px;
+    height: 30px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+.moneybox a {
+    text-decoration: none;
+    color: var(--seccolor);
+    width: 100px;
+}
+.moneybox h6 {
+    width: 100px;
+    font-size: 18px;
+}
+.container8 .bookingbox .imgs2 {
+    width: 240px;
+    height: 450px;
+}
+.container8 .bookingbox .imgs2 img{
+    width: 240px;
+    height: 200px;
+}
+.container8 .bookingbox .imgs2 h3 {
+    font-size: 20px;
+    margin: 20px 5px;
+    color: var(--maincolor);
+}
+.container8 .bookingbox .imgs2 p {
+    font-size: 15px;
+    color: #777;
+    line-height: 1.8;
+    margin: 15px 10px;
+}
+.container8 .bookingbox .imgs2 .moneybox {
+    width: 240px;
+    height: 30px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+.container8 .bookingbox .imgs3 {
+    width: 240px;
+    height: 450px;
+}
+.container8 .bookingbox .imgs3 img{
+    width: 240px;
+    height: 200px;
+}
+.container8 .bookingbox .imgs3 h3 {
+    font-size: 20px;
+    margin: 20px 5px;
+    color: var(--maincolor);
+}
+.container8 .bookingbox .imgs3 p {
+    font-size: 15px;
+    color: #777;
+    line-height: 1.8;
+    margin: 15px 10px;
+}
+.container8 .bookingbox .imgs3 .moneybox {
+    width: 240px;
+    height: 30px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+.container8 .bookingbox .imgs4{
+    width: 240px;
+    height: 450px;
+}
+.container8 .bookingbox .imgs4 img{
+    width: 240px;
+    height: 200px;
+}
+.container8 .bookingbox .imgs4 h3 {
+    font-size: 20px;
+    margin: 20px 5px;
+    color: var(--maincolor);
+}
+.container8 .bookingbox .imgs4 p {
+    font-size: 15px;
+    color: #777;
+    line-height: 1.8;
+    margin: 15px 10px;
+}
+.container8 .bookingbox .imgs4 .moneybox {
+    width: 240px;
+    height: 30px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+.container9 {
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    background: url(../images/b4.jpg) no-repeat center/100% 100%;
+}
+.container9 .format {
+    width: 400px;
+    height: 90px;
+    margin: 80px auto;
+    border: 20px solid rgb(185, 183, 183);
+}
+.container9 .format .one {
+    width: 250px;
+    height: 50px;
+}
+.container9 .format .two {
+    width: 105px;
+    height: 50px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--seccolor);
+    border: 0;
+}
+.container9 .format .two:hover {
+    background-color: green;
+}
+.container10 {
+    width: 100%;
+    height: 700px;
+    margin: 0 auto;
+}
+.container10 .contactbox {
+    width: 75%;
+    height: 500px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.container10 .contactbox form {
+    width: 49.5%;
+    height: 490px;
+}
+.container10 fieldset {
+    border: 0;
+}
+.container10 .contactbox form input {
+    width: 235px;
+    height: 55px;
+    margin-top: 5px;
+    outline: 0;
+}
+.container10 .contactbox form textarea {
+    width: 475px;
+    height: 280px;
+    margin-top: 10px;
+    resize: none;
+    outline: 0;
+}
+.container10 .contactbox form input:last-child {
+    width: 480px;
+    background: #000;
+    margin-top: 20px;
+    background-color: var(--seccolor);
+    color: white;
+    font-size: 20px;
+    border: 0;
+} 
+.container10 .contactbox form input:last-child:hover {
+    background-color: green;
+}
+.addr {
+    width: 100%;
+    height: 300px;
+    color: rgba(238, 238, 238, 0.829);
+    background: rgb(54, 52, 52);  
+    padding-top: 80px;
+    margin: 0 auto;
+}
+.addr .connect {
+    width: 30%;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+}
+.addr .social {
+    width: 100px;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+}
+.addr .up {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.addr .connect {
+    width: 30%;
+    height: 150px;
+    margin-top: 30px auto;
+}
+.addr .connect span {
+    color: white;
+    font-size: 22px;
+    text-transform: capitalize;
+}
+footer {
+    width: 100%;
+    height: 50px;
+    background: black;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 auto;
+}
